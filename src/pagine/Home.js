@@ -20,21 +20,21 @@ function Home() {
 
   const categorie = {
     "Musica": {
-      livello1: ["canto", "strumenti", "studio", "live"],
+      livello1: ["Cantante", "Strumentista", "Studio Producer", "Live Producer"],
       livello2: ["Pop e Indie", "Raggaeton", "Rap e Hip Hop", "Rock e Metal",
         "Classica", "Elettronica, Techno e Disco", "Jazz e Blues", "Gospel e Soul", "Funk e Raggae", "altro"
       ]
     },
     "Arti visive": {
-      livello1: ["pittura", "scultura", "disegno", "fotografia", "3D modeling"],
-      livello2: ["ritrattistica", "paesaggistica", "animali", "natura morta", "astrattismo",
-        "concettuale", "fantasy", "altro"
+      livello1: ["Pittore", "Scultore", "Disegnatore", "Fotografo", "Modellatore 3D", "Digital Artist"],
+      livello2: ["Ritrattistica", "Paesaggistica", "Animali", "Natura morta", "Astrattismo",
+        "Concettuale", "Fantasy", "altro"
       ]
     },
     "Design": {
-      livello1: ["graphic design", "product design", "logo design"],
-      livello2: ["flat e minimalismo", "massimalismo", " art dèco", "geometrico", "retrò",
-        "corporate", "brutalismo", "media blending", "altro"
+      livello1: ["Graphic Design", "Product Design", "Logo Design"],
+      livello2: ["Flat e Minimalismo", "Massimalismo", " Art Dèco", "Stile Geometrico", "Retrò",
+        "Corporate", "Brutalismo", "Media Blending", "altro"
       ]
     }
   }
@@ -160,9 +160,9 @@ function Home() {
   return (
     <div className="main" style={{ overflowY: "scroll" }} >
       <br />
-      <h2>LocalTalentHub: scopri chi condivide le tue passioni nella tua stessa città</h2>
-      <p>Mettiti in contatto con altri artisti con i tuoi stessi interessi:
-        scambia opinioni e inizia nuove collaborazioni.
+      <h1 class="description">Talent Hub ti aiuta a scoprire chi condivide le tue passioni nella tua stessa città</h1>
+      <p>Mettiti in contatto con altri Talent con i tuoi stessi interessi,
+        scambia opinioni e inizia nuove collaborazioni!
       </p>
       {secondoLivello && datiUtente.nickname && datiUtente.city && !loading ?
         <div>
@@ -207,7 +207,7 @@ function Home() {
           null
       }
       {secondoLivello ? null :
-        <div><h2>Imposta preferenze:</h2> <br />
+        <div><h2>Che tipo di Talent sei? Imposta le tue preferenze:</h2> <br />
           <div style={{ height: "auto", overflowY: "auto" }}>
             <div style={{ flexDirection: "row", width: "100%", flexWrap: "wrap", gap: "1vw", justifyContent: "center", marginBottom: "1vw" }}>
               {Object.keys(categorie).map((singolaCategoria) => (
